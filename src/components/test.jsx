@@ -59,10 +59,10 @@ const Appe = () => {
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} >
 
 
-
+                   
                     {savedEntries.map((entry, index) => (
                         <Menu.Item key={index}>
-                            <div>
+                            <div className='red'>
                                 <div className='title_red'>{entry.title}</div>
                                 <button onClick={() => handleDelete(index)}><DeleteOutlined /></button>
                             </div>
@@ -97,7 +97,6 @@ const Appe = () => {
                     <NoteDisplay title={form.getFieldValue('title') || ''} markdownContent={markdownContent} />
                     <div className='machin'>
                         <div className='truc'>
-                            <p>contenu :</p>
                             <div className='column-input'>
                                 <Form form={form} layout="vertical" >
                                     <Form.Item label="Titre" name="title" rules={[{ required: true, message: 'Veuillez saisir un titre' }]} >
