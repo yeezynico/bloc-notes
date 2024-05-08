@@ -3,16 +3,18 @@ import './App.css';
 import MarkdownInput from './components/MarkdownInput';
 // import NoteDisplay from './components/NoteDisplay';
 import Menu from './components/sidebar';
+import Appe from './components/test'
 
 const App = () => {
   return (
     <div className="app-container">
       <div className="menu">
-        <Menu />
+        {/* <Menu /> */}
+        <Appe />
       </div>
       <div className="content">
        
-        <MarkdownInput />
+        {/* <MarkdownInput /> */}
 
       </div>
     </div>

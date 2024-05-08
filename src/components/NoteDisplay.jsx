@@ -1,12 +1,22 @@
-import React from 'react';
+import Showdown from "showdown";
+import PropTypes from 'prop-types';
 
-const NoteDisplay = () => {
+const converter = new Showdown.Converter();
+
+const NoteDisplay = ({ title, markdownContent }) => {
+  const htmlContent = converter.makeHtml(markdownContent);
+
   return (
     <div>
-      <h1>Contenu de la note</h1>
-      <h3>Contenu de la note affiché en HTML:</h3>
+      <h1>{title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(markdownContent) }}/>
     </div>
   );
+}
+
+NoteDisplay.protoTypes = {
+  title: PropTypes.string.isRequired,
+  markdownValue: PropTypes.string.isRequired
 }
 
 export default NoteDisplay;
