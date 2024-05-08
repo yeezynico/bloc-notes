@@ -1,7 +1,7 @@
 import 'antd/dist/antd.css';
 import './App.css';
 import MarkdownInput from './components/MarkdownInput';
-import NoteDisplay from './components/NoteDisplay';
+// import NoteDisplay from './components/NoteDisplay';
 import Menu from './components/sidebar';
 
 const App = () => {
@@ -11,8 +11,9 @@ const App = () => {
         <Menu />
       </div>
       <div className="content">
-        <NoteDisplay />
+       
         <MarkdownInput />
+
       </div>
     </div>
   );
